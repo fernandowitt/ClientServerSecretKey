@@ -40,13 +40,7 @@ public class Entrada implements Runnable {
             Logger.getLogger(Entrada.class.getName()).log(Level.SEVERE, null, ex);
         }
         
- 
-//        while (true) {
             try{
-            	//criar função de comparação dos nome passado com o nome da lista
-//            	if (entrada.readLine() == null || usuarioCodigo.get(entrada.readLine().toUpperCase()) == null) {
-//            			System.out.println("Erro");
-//            	}else {
             		String nomeCliente= entrada.readLine().toUpperCase();
             		System.out.println(nomeCliente);
             		if(nomeCliente.isBlank() || nomeCliente.isEmpty() || !usuarioCodigo.containsKey(nomeCliente.toUpperCase())) {
@@ -64,29 +58,16 @@ public class Entrada implements Runnable {
             	        } catch (IOException ex) {
             	        	ex.printStackTrace();
             	        }
-            	        
-            	    
-//            	        while (true) {
             	            
             	            try{
-            	            	//enviar o seu nome
             	            	saida.println("Fernando;" + numero.toString());
-            	            	
-            	            	
-            	            	//enviar o numero dele
-            	                
-            	               
-            						cliente.close();
-            						
-            	                
+            					cliente.close();
             	            }catch (IOException e){
             	                System.out.println("..");
             	            }
-//            	        }
                 
             }catch (IOException e){
                 System.out.println("..");
             }
-//        }
     } 
 }

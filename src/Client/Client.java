@@ -27,7 +27,6 @@ public class Client {
 			}
 			
 			}catch (Exception e) {
-				// TODO: handle exception
 				System.out.println("ERRO: "+ e.getMessage());
 			}
 		}
@@ -37,7 +36,7 @@ public class Client {
 	 
 	public static void main(String[] args) throws IOException {
 		Socket conexao;
-		HashMap<String, String> usuarioCodigo2 = new HashMap<String, String>();
+		HashMap<String, String> usuarioCodigo = new HashMap<String, String>();
 	    Random rand = new Random();
 	    int [] index = new int [13];
 	    int d;
@@ -61,34 +60,19 @@ public class Client {
 	    	}	 
 	    }
 	     
-	   //criar hashmap dos numeros que foram sorteados para mim 
-//	      HashMap<String, String> numerosCriadosPMim = new HashMap<String, String>();
-//	      numerosCriadosPMim.put( "KARINE", "" +0  );
-//	      numerosCriadosPMim.put( "GUSTAVO", ""+ 0);
-//	      numerosCriadosPMim.put( "EVELIN", ""+0);
-//	      numerosCriadosPMim.put( "RAFAEL", ""+0);
-//	      numerosCriadosPMim.put( "MATEUS", ""+0);
-//	      numerosCriadosPMim.put( "SILVIO", ""+0);
-//	      numerosCriadosPMim.put( "JOHN", ""+0);
-//	      numerosCriadosPMim.put( "GIOVANNI", ""+0);
-//	      numerosCriadosPMim.put( "TIAGO", ""+0);
-//	      numerosCriadosPMim.put( "LUCAS", ""+0);
-//	      numerosCriadosPMim.put( "LUCIANO", ""+0);
-//	      numerosCriadosPMim.put( "THOMAS", ""+0);
-	     
-	      usuarioCodigo2.put( "KARINE", ""+index[0] );
-	      usuarioCodigo2.put( "GUSTAVO", ""+index[1]);
-	      usuarioCodigo2.put( "EVELIN", ""+index[2]);
-	      usuarioCodigo2.put( "RAFAEL", ""+index[3]);
-	      usuarioCodigo2.put( "MATEUS", ""+index[4]);
-	      usuarioCodigo2.put( "SILVIO", ""+index[5]);
-	      usuarioCodigo2.put( "JOHN", ""+index[6]);
-	      usuarioCodigo2.put( "GIOVANNI", ""+index[7]);
-	      usuarioCodigo2.put( "TIAGO", ""+index[8]);
-	      usuarioCodigo2.put( "LUCAS", ""+index[9]);
-	      usuarioCodigo2.put( "LUCIANO", ""+index[10]);
-	      usuarioCodigo2.put( "THOMAS", ""+index[11]);
-	      usuarioCodigo2.put( "FERNANDO", ""+index[12]);
+	      usuarioCodigo.put( "KARINE", ""+index[0] );
+	      usuarioCodigo.put( "GUSTAVO", ""+index[1]);
+	      usuarioCodigo.put( "EVELIN", ""+index[2]);
+	      usuarioCodigo.put( "RAFAEL", ""+index[3]);
+	      usuarioCodigo.put( "MATEUS", ""+index[4]);
+	      usuarioCodigo.put( "SILVIO", ""+index[5]);
+	      usuarioCodigo.put( "JOHN", ""+index[6]);
+	      usuarioCodigo.put( "GIOVANNI", ""+index[7]);
+	      usuarioCodigo.put( "TIAGO", ""+index[8]);
+	      usuarioCodigo.put( "LUCAS", ""+index[9]);
+	      usuarioCodigo.put( "LUCIANO", ""+index[10]);
+	      usuarioCodigo.put( "THOMAS", ""+index[11]);
+	      usuarioCodigo.put( "FERNANDO", ""+index[12]);
 	      
 	      for(int j = 0; j < 13; j++) {
 	    	  System.out.println(index[j]);
@@ -106,7 +90,7 @@ public class Client {
 	  		  	if( conexao.isConnected()) {
 	  			  	System.out.println("O cliente se conectou ao servidor!");
 
-	  			  	Entrada input = new Entrada(conexao, usuarioCodigo2);
+	  			  	Entrada input = new Entrada(conexao, usuarioCodigo);
 	  			  	Thread ti = new Thread(input);
 	  			  	ti.start();
 	  		  	}

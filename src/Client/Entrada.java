@@ -31,8 +31,6 @@ public class Entrada implements Runnable {
             Logger.getLogger(Entrada.class.getName()).log(Level.SEVERE, null, ex);
         }
        
- 
-//        while (true) {
             try{
             	
                 BufferedReader teclado = new BufferedReader(
@@ -43,10 +41,6 @@ public class Entrada implements Runnable {
                 } catch (IOException ex) {
                 	ex.printStackTrace();
                 }
-                
-           
-
-                    
                     saida.println("Fernando");
                     
                     String[] in = entrada.readLine().split(";");
@@ -56,7 +50,6 @@ public class Entrada implements Runnable {
             }catch (IOException e){
                 System.out.println("..");
             }
-//        }
     }
 
 }

@@ -42,8 +42,6 @@ public class Server {
 	    	  System.out.println("" + index[i]);
 	      }
 	      
-	      
-	      
 	      usuarioCodigo.put( "KARINE", ""+index[0] );
 	      usuarioCodigo.put( "GUSTAVO", ""+index[1]);
 	      usuarioCodigo.put( "EVELIN", ""+index[2]);
@@ -58,11 +56,6 @@ public class Server {
 	      usuarioCodigo.put( "THOMAS", ""+index[11]);
 	      usuarioCodigo.put( "FERNANDO", ""+index[12]);
 	
-	
-	      
-	      
-	
-    // loop inicio 
 	      int total=0;
 	      ServerSocket servidor = new ServerSocket(6666);
 	      Socket cliente;
@@ -71,21 +64,11 @@ public class Server {
 	    	  cliente = servidor.accept();
 	    	  System.out.println("Nova conex�o com o cliente " + cliente.getInetAddress().getHostAddress());
          
-	    	  Entrada input = new Entrada(cliente , usuarioCodigo); //passar lista de pessoas
+	    	  Entrada input = new Entrada(cliente , usuarioCodigo);
 	    	  Thread ti = new Thread(input);
 	    	  ti.start();
-	    	  
-//	    	  ti.stop();
-	    	  //pegar o numero correspondete
-	    	  
-       
-	    	  //ler o seu numero dnv
-       
-	    	  
-	    	  //escrever no outro hashmap
 	    	  total++;
 	      }
-      //loop fim
       
    }
  }
